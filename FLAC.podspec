@@ -30,13 +30,19 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'FLAC/Classes/**/*'
+  s.source_files = 'FLAC/Classes/*.{c,h}', 'FLAC/Classes/src/libFLAC/**/*.{c,h}', 'FLAC/Classes/include/{FLAC,private}/*.h'
+  #s.private_header_files = 'FLAC/Classes/include/{private,libFLAC}/*.h'
+  s.public_header_files = 'FLAC/Classes/FLAC.h', 'FLAC/Classes/include/{private,libFLAC}/*.h'
+
+  s.xcconfig = {
+    'HEADER_SEARCH_PATHS' =>
+        '"/Users/chris/repos/FLAC/FLAC/Classes/include"'
+  }
   
   # s.resource_bundles = {
   #   'FLAC' => ['FLAC/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

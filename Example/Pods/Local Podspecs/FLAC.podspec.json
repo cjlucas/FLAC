@@ -1,0 +1,33 @@
+{
+  "name": "FLAC",
+  "version": "0.1.0",
+  "summary": "A short description of FLAC.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Chris Lucas/FLAC",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Chris Lucas": "chris@chrisjlucas.com"
+  },
+  "source": {
+    "git": "https://github.com/Chris Lucas/FLAC.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": [
+    "FLAC/Classes/*.{c,h}",
+    "FLAC/Classes/src/libFLAC/**/*.{c,h}",
+    "FLAC/Classes/include/{FLAC,private}/*.h"
+  ],
+  "public_header_files": [
+    "FLAC/Classes/FLAC.h",
+    "FLAC/Classes/include/{private,libFLAC}/*.h"
+  ],
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"/Users/chris/repos/FLAC/FLAC/Classes/include\""
+  }
+}

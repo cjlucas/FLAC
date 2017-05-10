@@ -8,6 +8,8 @@
 
 #import "FLACViewController.h"
 
+@import FLAC;
+
 @interface FLACViewController ()
 
 @end
@@ -18,6 +20,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+   
+    FLAC__StreamDecoder *decoder = FLAC__stream_decoder_new();
+    printf("%d\n", FLAC__stream_decoder_init_stream(decoder, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, (__bridge void *)self));
 }
 
 - (void)didReceiveMemoryWarning
