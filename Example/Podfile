@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FLAC_Example' do
+  pod 'FLAC', :path => '../'
+
+  target 'FLAC_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
